@@ -10,11 +10,14 @@ public class Main {
             sum = roll1 + roll2;
             if (roll1 == roll2) {
                 count++;
-                System.out.println("User rolls " + roll1 + " & " + roll2 + "\nDOUBLES! \nMove" + sum + " Spaces and roll again getting...");
+                if (count==3) {
+                    System.out.println("User rolls " + roll1 + " & " + roll2 + "\nDOUBLES! \nGO TO JAIL--->");
+                }else {
+                    System.out.println("User rolls " + roll1 + " & " + roll2 + "\nDOUBLES! \nMove" + sum + " Spaces and roll again getting...");
+                }
             } else if (roll1 != roll2) {
                 System.out.println("User rolls " + roll1 + " & " + roll2 + "\nMove " + sum + " Spaces and stop");
             }
         }while (count<3);
-        System.out.println("You go to jail!");
     }
 }
