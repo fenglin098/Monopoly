@@ -5,8 +5,8 @@ public class Main {
         count=0;
         do {
             Random num = new Random();
-            roll1 = 1 + num.nextInt(1);
-            roll2 = 1 + num.nextInt(1);
+            roll1 = 1 + num.nextInt(6);
+            roll2 = 1 + num.nextInt(6);
             sum = roll1 + roll2;
             if (roll1 == roll2) {
                 count++;
@@ -17,6 +17,7 @@ public class Main {
                 }
             } else if (roll1 != roll2) {
                 System.out.println("User rolls " + roll1 + " & " + roll2 + "\nMove " + sum + " Spaces and stop");
+                break;
             }
         }while (count<3);
     }
